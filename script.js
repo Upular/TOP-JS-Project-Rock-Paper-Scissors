@@ -21,6 +21,11 @@ function playGame() {
   let computerScore = 0;
 
   function playRound(humanChoice, computerChoice) {
+    
+    if (humanChoice === null) {
+      return "Game canceled by the player!";
+    }
+
     const lowHumanChoice = humanChoice.toLowerCase();
 
     if (!VALID_OPTIONS.includes(humanChoice)) {
